@@ -1,20 +1,27 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap";
 
+:root {
+    --color-green: #50fa7b;
+    --color-grey: #282a36;
+    --color-white: white;
+    --color-blacksoft: rgba(0, 0, 0, 0.356);
+}
+
 *{
     margin: 0;
     padding: 0;
     border: 0;
 }
 body {
-    background: #282a36;
-    color: white;
+    background: var(--color-grey);
+    color: var(--color-white);
     font-family: 'Roboto', sans-serif;
 }
 
 header {
     padding: 30px;
-    background: rgba(0, 0, 0, 0.356);
-    border: 2px solid #333;
+    background: var(--color-blacksoft);
+
 }
 
 .links {
@@ -23,15 +30,86 @@ header {
 
 }
 
-header .links a {
-    color: white;
+.links a {
+    color: var(--color-white);
     font-size: 18px;
     line-height: 28px;
     margin: 0 30px;
     text-decoration: none;
 }
 
-header .links a:hover {
-    color: #50fa7b;
+.links a:hover {
+    color: var(--color-green);
     transition: color 200ms;
+}
+
+#content  {
+    text-align: center;
+    padding-top: 32px;
+}
+
+#content img {
+    border-radius: 50%;
+    margin-bottom: 32px;
+    height: 300px;
+    border: 2px solid var(--color-green);
+}
+
+#content h1 {
+    font-size: 42px;
+    line-height: 52px;
+}
+
+#content p {
+    font-size: 22px;
+    line-height: 32px;
+    opacity: 0.7;
+    max-width: 500px;
+    margin: 8px auto;
+}
+
+#content ul {
+    max-width: 500px;
+    margin: 8px auto;
+    list-style-type: none;
+}
+
+#content ul li {
+    border: 1px solid var(--color-green);
+    font-size: 16px;
+    line-height: 26px;
+
+}
+
+#links-footer {
+    margin-top: 32px;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
+}
+
+
+/*=========CARDS===========*/
+
+.cards {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card { 
+    background-color: var(--color-blacksoft);
+}
+
+
+
+
+.card__image-container img {
+    width: 100%;
+}
+
+
+.card-content, 
+.card__price {
+    padding:24px;
 }
